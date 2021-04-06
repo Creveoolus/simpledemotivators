@@ -3,19 +3,6 @@ import textwrap
 import requests
 import random
 
-
-version = requests.get(
-        'https://raw.githubusercontent.com/infqq/simpledemotivators/master/simpledemotivators/version.txt'
-        ).text.splitlines()
-
-if version[0] != '1.8.0':
-        print(
-                f'[SimpleDemotivators] Данная версия библиотеки устарела, обновитесь до v{version[0]} с GitHub\nИзменения: {version[1]}')
-else:
-        print(
-                f'SimpleDemotivators v{version[0]} started, version actual.')
-
-
 class demcreate:
         def __init__(
                 self, text1='', text2='') -> str:
@@ -25,7 +12,7 @@ class demcreate:
 
         def makeImage(
                 self, file, RESULT_FILENAME='demresult.jpg', colortext = 'white',
-                colorfill = 'black', fonttext='times.ttf', size2 = 80, size3 = 60
+                colorfill = 'black', fonttext='../app/times-new-roman.ttf', size2 = 80, size3 = 60
                 ):
                 
                 self._file = file
