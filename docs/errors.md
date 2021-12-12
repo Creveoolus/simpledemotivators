@@ -29,7 +29,7 @@ try:
     quote.get(filename)
     
     print('Библиотека полностью работает.')
-except Exception as e:
-    print(e)
+except Exception:
+    raise
 ```
 2. Создаем Issue с ошибкой, если она есть.
